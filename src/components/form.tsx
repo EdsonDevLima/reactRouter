@@ -1,3 +1,4 @@
+import Styles from "./form.module.css"
 interface PropsForm{
   user:(data:string)=>void
   password:(data:string)=>void
@@ -6,7 +7,7 @@ interface PropsForm{
 const Form = ({user,password,confirmPassword}:PropsForm)=>{
   return(
   <>
-  <form>
+  <form className={Styles.Form}>
     <label>
       Usuario:
       <input type="text" onChange={(e)=>{user(e.target.value)}} />
